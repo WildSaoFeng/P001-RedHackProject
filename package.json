@@ -1,0 +1,35 @@
+{
+  "name": "red_hack_project",
+  "version": "1.0.0",
+  "description": "A project for celebrating 2018 Chinese Lantern Festival! Presented by Red-Hack-Team, 17-Donation-R&D Department",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "*",
+    "mongoose": "*",
+    "bcryptjs": "*",
+    "cors": "*",
+    "jsonwebtoken": "*",
+    "body-parser": "*",
+    "passport": "*",
+    "passport-jwt":"*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WildSaoFeng/P001-RedHackProject.git"
+  },
+  "keywords": [
+    "17-Donation-R&D",
+    "MEAN",
+    "Angular5",
+    "Red-Hack-Team"
+  ],
+  "author": "WildsaoFeng@17 Haru@17 Yiru@17",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WildSaoFeng/P001-RedHackProject/issues"
+  },
+  "homepage": "https://github.com/WildSaoFeng/P001-RedHackProject#readme"
+}
