@@ -1,3 +1,49 @@
-<p>
-  wallet works!
-</p>
+<div class="row clearfix">
+  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <div *ngIf="user">
+      <h2 class="page-header">元宵快乐，旺旺狗年！</h2>
+      <ul class="list-group">
+        <li class="list-group-item">兑换码: {{user.name}}</li>
+        <li class="list-group-item">狗狗币枚数:  {{user.number}}</li>
+        <li class="list-group-item">私钥:  {{user.cypherkey}}</li>
+        <li class="list-group-item">私钥二维码：
+          <ngx-qrcode  [qrc-element-type]="elementType" [qrc-value] = "user.cypherkey"></ngx-qrcode>
+        </li>
+      </ul>
+      <p> PS:  私钥及其二维码就像银行卡密码，请妥善保管，不要暴露给他人哦~ </p>
+      <p> PS2:  由于区块链网络延迟，您的狗狗币将于三个工作日内到账 </p>
+    </div>
+
+    <div *ngIf="!user">
+      <app-login></app-login>
+    </div>
+  </div>
+
+  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <h2 class="page-header">狗狗币是什么？</h2>
+    <p> 狗狗币（Dogecoin），有人称作“狗币”诞生于2013年12月8日，基于Scrypt算法，<br><br>
+      狗狗币（dogecoin，货币代码：DOGE）诞生于2013年12月8日，
+      作者一位是澳大利亚的品牌与市场营销专家Jackson Palmer，
+      一位是美国俄勒冈州波特兰市的程序员Billy Markus。Dogecoin基于Scrypt算法，
+      是目前国际上很常用的数字货币，交易确认时间为1分钟，较比特币更加迅速。<br><br>
+
+      数字货币是民间发起的全球通用货币，不属于某个国家，是属于全人类，具有全球转帐速度快的优点，
+      如几秒内就可以把钱由国内汇到美国，且费用低廉，并且总量不会像法币一样随意增发，总量相对稳定。<br><br>
+
+      狗币的立身之本是娱乐，打赏和慈善，今年也没有很多的表现，希望狗币基金会能够多做一些对狗币有用的事情，重新树立起投资者的信心。
+
+    </p>
+  </div>
+</div>
+
+<!--<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">-->
+  <!--<P>A</P>-->
+<!--</div>-->
+
+<!--<div class="clearfix" >-->
+
+<!--</div>-->
+
+<!--<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">-->
+  <!--<P>B</P>-->
+<!--</div>-->

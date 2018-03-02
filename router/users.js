@@ -27,9 +27,9 @@ router.post('/register', (req, res, next) => {
 
 // Authenticate
 router.post('/authenticate', (req, res, next) => {
-    const name = req.body.name;
+    const usertoken = req.body.token;
 
-    User.getUserByToken(name, (err, user) => {
+    User.getUserByToken(usertoken, (err, user) => {
         if (err) throw err;
         if (!user) {
             return res.json({success: false, msg: 'Incorrect Token! '});
